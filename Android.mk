@@ -10,4 +10,5 @@ LOCAL_OPTIONAL_USES_LIBRARIES := androidx.window.extensions androidx.window.side
 endif
 # 4.6.2
 LOCAL_SRC_FILES := AuroraStore.apk
+LOCAL_REPLACE_PREBUILT_APK_INSTALLED := $(LOCAL_PATH)/$(LOCAL_MODULE).apk
 include $(BUILD_PREBUILT)
