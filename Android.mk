@@ -10,4 +10,5 @@ LOCAL_OPTIONAL_USES_LIBRARIES := androidx.window.extensions androidx.window.side
 endif
 # 4.6.2
 LOCAL_SRC_FILES := AuroraStore.apk
+LOCAL_SDK_VERSION := 30
 include $(BUILD_PREBUILT)
