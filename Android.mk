@@ -10,5 +10,9 @@ LOCAL_OPTIONAL_USES_LIBRARIES := androidx.window.extensions androidx.window.side
 endif
 # 4.6.2
 LOCAL_SRC_FILES := AuroraStore.apk
+# this is needed because of the No APK Signature Scheme v2 signature in package error for version 4.6.2
+# which results in app not being installed.
+# Apparently, AOSP strips down the apk and also strips down the Signature Scheme v2 while stripping it
+# so we use this flag to maintain the scheme and allow the app to be properly installed.
 LOCAL_REPLACE_PREBUILT_APK_INSTALLED := $(LOCAL_PATH)/$(LOCAL_MODULE).apk
 include $(BUILD_PREBUILT)
